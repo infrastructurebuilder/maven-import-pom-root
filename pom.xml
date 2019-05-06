@@ -26,35 +26,15 @@
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
   <description>Maven core and resolver support</description>
-  <url>${site.url}</url>
+  <url>https://github.com/${team.name}/maven-import-pom-root</url>
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/deliver8r/maven-dependencies-import-pom-support/issues</url>
+    <url>https://github.com/infrastructurebuilder/maven-import-pom-root/issues</url>
   </issueManagement>
   <ciManagement>
     <system>jenkins</system>
-    <url>https://jenkins.deliver8r.com/job/maven-dependencies-import-pom-support</url>
+    <url>https://jenkins.infrastructurebuilder.org/job/maven-import-pom-root</url>
   </ciManagement>
-  <distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <url>https://artifacts.deliver8r.com/repository/libs-releases-local/</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexus</id>
-      <url>https://artifacts.deliver8r.com/repository/libs-snapshots-local/</url>
-    </snapshotRepository>
-    <site>
-      <id>nexus</id>
-      <url>dav:${site.url}</url>
-    </site>
-  </distributionManagement>
-  <scm>
-    <connection>scm:git:git@github.com:deliver8r/maven-dependencies-import-pom-support.git</connection>
-    <developerConnection>scm:git:git@github.com:deliver8r/maven-dependencies-import-pom-support.git</developerConnection>
-    <url>scm:git:git@github.com:deliver8r/maven-dependencies-import-pom-support.git</url>
-    <tag>HEAD</tag>
-  </scm>
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -64,9 +44,44 @@
     </license>
   </licenses>
 
+  <developers>
+    <developer>
+      <id>mykelalvis</id>
+      <email>mykel dot alvis at gmail dot com</email>
+      <name>Mykel Alvis</name>
+      <organization>${team.name}</organization>
+      <organizationUrl>https://github.com/${team.name}</organizationUrl>
+      <timezone>America/Chicago</timezone>
+      <roles>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <contributors>
+  </contributors>
+
+  <scm>
+    <connection>scm:git:https://github.com/${team.name}/maven-import-pom-root.git</connection>
+    <url>https://github.com/${team.name}/maven-import-pom-root</url>
+    <developerConnection>scm:git:git@github.com:${team.name}/maven-import-pom-root.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
   <properties>
-     <google.guice.version>4.2.1</google.guice.version>
-    <ib.site.root>https://artifacts.deliver8r.com/repository/sites</ib.site.root>
+    <team.name>infrastructurebuilder</team.name>
+    <google.guice.version>4.2.1</google.guice.version>
     <maven.doxia.version>1.8</maven.doxia.version>
     <maven.filtering.version>3.1.2</maven.filtering.version>
     <maven.plexus.component.metadata.version>1.7.1</maven.plexus.component.metadata.version>
@@ -80,8 +95,6 @@
     <maven.wagon.version>3.3.2</maven.wagon.version>
     <plexus.interpolation.version>1.25</plexus.interpolation.version>
     <plexus.utils.version>3.2.0</plexus.utils.version>
-    <site.path>${project.groupId}/${project.artifactId}/${project.version}</site.path>
-    <site.url>${ib.site.root}/${site.path}</site.url>
   </properties>
   <build>
     <pluginManagement>
