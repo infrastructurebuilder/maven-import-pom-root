@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.infrastructurebuilder.util</groupId>
+    <artifactId>maven-import-pom-root</artifactId>
+    <version>3.6.1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>plexus-import-pom</artifactId>
+  <packaging>pom</packaging>
+  <name>${project.artifactId}</name>
+  <description>Plexus dependencies import pom, derived from Maven dependencies</description>
+  <!-- URL for site gen -->
+  <url>${site.url}</url>
+  <distributionManagement>
+    <site>
+      <id>nexus</id>
+      <url>dav:${site.url}</url>
+    </site>
+  </distributionManagement>
+  <properties>
+    <site.url>${ib.site.root}/${project.groupId}/${project.artifactId}/${project.version}</site.url>
+    <sisuVersion>0.9.0-SNAPSHOT</sisuVersion>
+    <plexus.archiver.version>4.1.0</plexus.archiver.version>
+    <eclipse.sisu.plexus.version>0.3.3</eclipse.sisu.plexus.version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>javax.inject</groupId>
+        <artifactId>javax.inject</artifactId>
+        <version>1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.sisu</groupId>
+        <artifactId>org.eclipse.sisu.plexus</artifactId>
+        <version>${eclipse.sisu.plexus.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-utils</artifactId>
+        <version>${plexus.utils.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-interpolation</artifactId>
+        <version>1.25</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-archiver</artifactId>
+        <version>${plexus.archiver.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
