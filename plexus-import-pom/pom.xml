@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.infrastructurebuilder.util</groupId>
     <artifactId>maven-import-pom-root</artifactId>
-    <version>3.6.1.0</version>
+    <version>3.6.1.0-SNAPSHOT</version>
   </parent>
   <artifactId>plexus-import-pom</artifactId>
   <packaging>pom</packaging>
