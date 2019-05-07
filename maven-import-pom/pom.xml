@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.infrastructurebuilder.util</groupId>
     <artifactId>maven-import-pom-root</artifactId>
-    <version>3.6.1.1-SNAPSHOT</version>
+    <version>3.6.1.1</version>
   </parent>
   <artifactId>maven-import-pom</artifactId>
   <packaging>pom</packaging>
