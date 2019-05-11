@@ -86,7 +86,7 @@
     <maven.doxia.version>1.8</maven.doxia.version>
     <maven.filtering.version>3.1.2</maven.filtering.version>
     <maven.plexus.component.metadata.version>1.7.1</maven.plexus.component.metadata.version>
-    <maven.plugin.annotations.version>3.6.1</maven.plugin.annotations.version>
+    <maven.plugin.annotations.version>3.6.0</maven.plugin.annotations.version>
     <maven.plugin.testing.harness.version>3.3.0</maven.plugin.testing.harness.version>
     <maven.project.version>2.2.1</maven.project.version>
     <maven.release.plugin.version>2.5.3</maven.release.plugin.version>

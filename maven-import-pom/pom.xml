@@ -43,6 +43,12 @@
         <classifier>no_aop</classifier>
       </dependency>
       <dependency>
+        <groupId>com.google.inject.extensions</groupId>
+        <artifactId>guice-assistedinject</artifactId>
+        <version>${google.guice.version}</version>
+      </dependency>
+
+      <dependency>
         <groupId>org.apache.maven.resolver</groupId>
         <artifactId>maven-resolver</artifactId>
         <version>${maven.resolver.version}</version>
